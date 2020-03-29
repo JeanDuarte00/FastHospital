@@ -1,0 +1,9 @@
+.accordion {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(121, 186, 248),
+    rgb(121, 224, 190)
+  );
+  text-align: left;
+  padding: 20px;
+}
