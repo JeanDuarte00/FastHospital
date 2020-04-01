@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Accordion, Icon, Container, Button } from "semantic-ui-react";
-import PatientForm from "../patientForms/patientForms";
-import "./main.css";
-import ClinicalConditionForm from "../clinicalConditionForms/clinicalCondition";
+import { Container, Divider, Accordion, Button, Icon } from "semantic-ui-react";
+import ClinicalConditionForm from "../../../Components/clinicalConditionForms/clinicalCondition";
+import PatientForms from "../../../Components/patientForms/patientForms";
 
-class Main extends Component {
-  state = { activeIndex: 0 };
+class Home extends Component {
+  state = { activeIndex: 0, activePage: "" };
+
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   handleClick = (e, titleProps) => {
     const { index } = titleProps;
@@ -17,9 +18,10 @@ class Main extends Component {
 
   render() {
     const { activeIndex } = this.state;
-
     return (
       <Container>
+        <Divider />
+
         <Accordion className="accordion">
           <Accordion.Title
             active={activeIndex === 0}
@@ -42,9 +44,11 @@ class Main extends Component {
             Dados Paciente
           </Accordion.Title>
           <Accordion.Content active={activeIndex === 1}>
-            <PatientForm />
+            <PatientForms />
           </Accordion.Content>
         </Accordion>
+
+        <Divider />
 
         <Button type="submit" icon="hospital">
           Buscar Hospital
@@ -54,4 +58,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Home;

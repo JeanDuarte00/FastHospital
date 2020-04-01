@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Button, Checkbox, Form, Container } from "semantic-ui-react";
-import { Input } from "semantic-ui-react";
+import { Form } from "semantic-ui-react";
 
-class PatientForm extends Component {
+class PatientForms extends Component {
   state = {};
 
   clearFields;
@@ -93,4 +92,4 @@ class PatientForm extends Component {
   clearFields = () => this.setState({ nome: "", quadroClinico: "" });
 }
 
-export default PatientForm;
+export default PatientForms;

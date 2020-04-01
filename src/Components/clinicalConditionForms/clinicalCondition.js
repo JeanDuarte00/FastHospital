@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Checkbox, Form, Container } from "semantic-ui-react";
+import { Form } from "semantic-ui-react";
 
 class ClinicalConditionForm extends Component {
   state = {};
@@ -34,8 +34,6 @@ class ClinicalConditionForm extends Component {
   ];
 
   render() {
-    const { nome, quadroClinico } = this.state;
-
     return (
       <Form>
         <Form.Group widths="2">
